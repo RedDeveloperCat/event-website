@@ -1,0 +1,22 @@
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff7300;
+}
+
+.logo-span {
+    text-align: center;
+}
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.social-media-link {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}

@@ -1,8 +1,21 @@
-# React + Vite
+start: npm run dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+used:
 
-Currently, two official plugins are available:
+"dependencies": {
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^18.3.1",
+    "vanta": "^0.5.24"
+  }
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  used vanta js with normal properties in app.jsx using useEffect: [link](https://www.vantajs.com/?effect=dots#(backgroundAlpha:1,backgroundColor:1447720,color:7032121,color2:16746528,gyroControls:!f,minHeight:200,minWidth:200,mouseControls:!t,scale:1,scaleMobile:1,showLines:!t,size:3.8000000000000003,spacing:28,touchControls:!t))
+
+  most assets in svg format for scaling
+
+  used google fonts in index.html
+
+  used react-bootstrap for responsive [navbar](https://react-bootstrap.netlify.app/docs/components/navbar/)
+
+all components in comp folder
