@@ -1,0 +1,125 @@
+/* Ensure full-screen background */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content from the top */
+  }
+  
+  /* Main container to center content */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start from the top */
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Ensure content takes full height */
+    padding: 20px; /* Adds spacing around the content */
+  }
+  
+  /* Ensures inner content is centered */
+  .container {
+    text-align: center;
+  }
+  
+  /* Make sure each section has enough margin */
+  h1, h2 {
+    margin: 20px 0;
+  }
+  
+  .slider, .gallery-btn, .about-text, .goals-heading, .goals-list {
+    margin-bottom: 20px;
+  }
+  
+  
+  /* Image Slider */
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .slide-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Navigation Buttons */
+  .nav-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #001f3f;
+    transition: transform 0.2s;
+  }
+  
+  .nav-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Gallery Button */
+  .gallery-btn {
+    background-color: rgb(250, 99, 18);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 15px auto;
+    display: block;
+    transition: background 0.3s;
+  }
+  
+  .gallery-btn:hover {
+    background-color: darkorange;
+  }
+  
+  /* About Us Section */
+  .about-text {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto 50px auto; /* Increased bottom margin to 50px */
+}
+.iete-sfit {
+  margin-top: 40px; /* Adds space before IETE SFIT */
+}
+  
+  /* Goals Section */
+  .goals-heading {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .goals-list {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .goals-list li {
+    margin: 15px 0; /* Increase spacing between items */
+    font-size: 16px;
+    line-height: 1.8; /* Improves readability */
+}
+
+  .orange-line {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(253, 93, 7); /* Orange line color */
+    margin-top: 10px;
+    margin-bottom: 20px; /* Space below the line */
+  }
+  
