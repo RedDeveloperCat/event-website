@@ -1,11 +1,11 @@
 import "./App.css";
-import AboutUsGoals from "./components/about-us-goals.jsx"; // Correct import
+import AboutUsGoals from "./components/about-us-goals.jsx";
 
 function App() {
   return (
     <>
       <div>
-        <AboutUsGoals /> {/* Correct component usage */}
+        <AboutUsGoals />
       </div>
     </>
   );
