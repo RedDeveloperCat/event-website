@@ -1,4 +1,4 @@
-/* Ensure full-screen background */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -8,26 +8,26 @@ body, html {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align content from the top */
+    align-items: flex-start;
   }
   
-  /* Main container to center content */
+  
   .app-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Start from the top */
+    justify-content: flex-start; 
     align-items: center;
     width: 100%;
-    min-height: 100vh; /* Ensure content takes full height */
-    padding: 20px; /* Adds spacing around the content */
+    min-height: 100vh; 
+    padding: 20px; 
   }
   
-  /* Ensures inner content is centered */
+ 
   .container {
     text-align: center;
   }
   
-  /* Make sure each section has enough margin */
+  
   h1, h2 {
     margin: 20px 0;
   }
@@ -91,10 +91,10 @@ body, html {
     line-height: 1.6;
     text-align: center;
     max-width: 800px;
-    margin: 20px auto 50px auto; /* Increased bottom margin to 50px */
+    margin: 20px auto 50px auto; 
 }
 .iete-sfit {
-  margin-top: 40px; /* Adds space before IETE SFIT */
+  margin-top: 40px;
 }
   
   /* Goals Section */
@@ -110,16 +110,16 @@ body, html {
   }
   
   .goals-list li {
-    margin: 15px 0; /* Increase spacing between items */
+    margin: 15px 0; 
     font-size: 16px;
-    line-height: 1.8; /* Improves readability */
+    line-height: 1.8; 
 }
 
   .orange-line {
     width: 100%;
     height: 4px;
-    background-color: rgb(253, 93, 7); /* Orange line color */
+    background-color: rgb(253, 93, 7); 
     margin-top: 10px;
-    margin-bottom: 20px; /* Space below the line */
+    margin-bottom: 20px;
   }
   
