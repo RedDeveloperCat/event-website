@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <div className="app-container">  {/* Use a wrapper div instead of <body> */}
+    <div className="app-container"> 
       <div className="container">
         <h1>ABOUT US</h1>
         <h2>IETE SFIT</h2>
