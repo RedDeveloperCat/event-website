@@ -3,8 +3,7 @@ import "./about-us-goals.css";
 import img1 from "./assets/img1.jpg";
 import img2 from "./assets/img2.jpg";
 import img3 from "./assets/img3.jpg";
-import img4 from "./assets/img5.jpg";
-
+import img4 from "./assets/img4.jpg";
 
 function App() {
   const images = [img1, img2, img3, img4];
@@ -19,7 +18,7 @@ function App() {
   };
 
   return (
-    <div className="app-container"> 
+    <div className="app-container">
       <div className="container">
         <h1>ABOUT US</h1>
         <h2>IETE SFIT</h2>
@@ -27,20 +26,21 @@ function App() {
 
         {/* Image Slider */}
         <div className="slider">
-          <button onClick={prevSlide} className="nav-btn">❮</button>
-          <img src={images[current]} alt="Slider" className="slide-img" />
-          <button onClick={nextSlide} className="nav-btn">❯</button>
+          <button onClick={prevSlide} className="nav-btn left-btn">❮</button>
+          <div className="slide-container">
+            <img src={images[current]} alt="Slider" className="slide-img" />
+          </div>
+          <button onClick={nextSlide} className="nav-btn right-btn">❯</button>
         </div>
 
         {/* Gallery Button */}
-        <button className="gallery-btn">Gallery </button>
+        <button className="gallery-btn">Gallery</button>
 
         {/* About Us Text */}
         <p className="about-text">
-        The Institute of Electrical and Electronics Engineering (IETE) is an International organization, which has been the nexus for propagating scientific expertise among people all over the globe. IETE continues to attract students, faculty and professionals from various fields all around the world and is committed to incorporating diversity in thoughts which is essential for scientific development.
-
-IEEE serves as a hub to many engineering students and faculty members for expressing their technical acuity to the world and has always been at the forefront of the technical revolution.
+          The Institute of Electrical and Electronics Engineering (IETE) is an International organization, which has been the nexus for propagating scientific expertise among people all over the globe. IETE continues to attract students, faculty, and professionals from various fields all around the world and is committed to incorporating diversity in thoughts which is essential for scientific development.
         </p>
+
         <div className="orange-line"></div>
 
         {/* Goals Section */}
@@ -48,8 +48,7 @@ IEEE serves as a hub to many engineering students and faculty members for expres
         <ul className="goals-list">
           <li>Inspire, Enable, Empower, and Energize our student members to enhance their technical interests.</li>
           <li>Inspire, Enable, Empower, and Energize our student members to enhance their technical interests.</li>
-          <li>Inspire, Enable, Empower, and Energize our student members to enhance their technical interests.</li>
-          
+          <li>Inspire, Enable, Empower, and Energize our student members to enhance their technical interests.</li>
         </ul>
         <div className="orange-line"></div>
       </div>
