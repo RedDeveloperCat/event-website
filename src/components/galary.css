@@ -1,0 +1,139 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Main container */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Centered content */
+.container {
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+/* Orange Line */
+.orange-line {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(253, 93, 7);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Image Slider */
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1080px;  /* Fixed width */
+    height: 668px;  /* Fixed height */
+    border-radius: 39px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.slide-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slide-img {
+    width: 100%;
+    height: auto;
+    border-radius: 39px;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+/* Event Gallery */
+.event-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    gap: 30px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+}
+
+/* Event Box */
+.event-box {
+    background: linear-gradient(145deg, #ff4e00, #d42a00);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 78, 0, 0.4);
+    width: 500px; /* Adjusted to fit grid */
+    height: 250px; /* Fixed height */
+}
+
+/* Placeholder for Image */
+.image-placeholder {
+    /* background: rgba(0, 0, 0, 0.3); */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Event Text (Placed Beneath Box) */
+.event-text {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(239, 67, 20);
+    text-align: center;
+}

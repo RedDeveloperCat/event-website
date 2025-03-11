@@ -1,0 +1,162 @@
+/* ==========================
+   1) YOUR EXISTING STYLES
+   ========================== */
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Main container */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Centered content */
+.container {
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+/* Orange Line */
+.orange-line {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(253, 93, 7);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Event Gallery */
+.event-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    gap: 30px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+}
+
+/* Event Box */
+.event-box {
+    background: linear-gradient(145deg, #ff4e00, #d42a00);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 78, 0, 0.4);
+    width: 500px; /* Adjusted to fit grid */
+    height: 250px; /* Fixed height */
+}
+
+/* Placeholder for Image */
+.image-placeholder {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Event Text (Placed Beneath Box) */
+.event-text {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(239, 67, 20);
+    text-align: center;
+}
+
+/* ==========================
+   2) REMOVED SLIDER STYLES
+   ========================== 
+   (The following classes have been removed since 
+    you mentioned you do not want the slider)
+
+   .slider, .slide-container, .slide-img, 
+   .nav-btn, .left-btn, .right-btn 
+*/
+
+/* ==========================
+   3) NEW/MODIFIED STYLES
+   ========================== */
+
+/* (Optional) Dark background for the entire page */
+body {
+  background-color: #000; /* Black background */
+}
+
+/* Neon-green headings */
+.highlight-title {
+  color: #0f0; /* neon green */
+  margin-top: 60px;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-subtitle {
+  color: white; /* neon green */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Description and subtext paragraphs */
+.description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #fff; /* White text for contrast */
+  margin: 0 auto 1rem;
+  max-width: 600px; /* Narrower width for readability */
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+/* Button styling */
+.event-button {
+  background-color: #0f0; /* Neon-green background */
+  color: #000;           /* Black text */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.event-button:hover {
+  background-color: #0a0; /* Darker green on hover */
+}
+.Eventcontain{
+    background-color: #000;
+    padding-top: 40px;
+  padding-bottom: 40px;
+
+  /* (Optional) If you want to center text inside this container */
+  text-align: center;
+}
