@@ -1,0 +1,112 @@
+.container {
+    min-height: 100vh;
+    background-color: black; /* Solid black background */
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the title */
+    justify-content: center;
+    position: relative; /* Add this to make absolute positioning work correctly */
+}
+
+.title {
+    font-family: 'Chivo Mono', monospace; /* Font family */
+    font-weight: 600; /* Font weight */
+    font-size: 50px; /* Font size */
+    line-height: 57.12px; /* Line height */
+    letter-spacing: 15%; /* Letter spacing */
+    text-align: center; /* Center the title */
+    margin-bottom: 2.5rem; /* Space below the title */
+    margin-top: 2.5rem;
+    margin-left: 2.5rem; /* Increase margin-top to move it higher */
+}
+
+.image-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem; /* Space below the images */
+    margin-left: 23rem; /* Align images to the left */
+    width: 100%; /* Ensure the section takes full width */
+    max-width: 70rem; 
+    /* Limit the width of the image section */
+}
+
+.college-image {
+    width: 23rem; /* Width of the college image */
+    height: 21rem; /* Height of the college image */
+    object-fit: cover;
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow */
+    /* Remove the border line below */
+    /* border: 1px solid #4b5563; */
+}
+
+.logo-container {
+    border-radius: 3rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow */
+    padding: 10px;
+    margin-left: 5rem; /* Add space between the images */
+    
+}
+
+.logo-container img {
+    box-shadow: 0 0 50px 10px rgba(128, 0, 128, 0.9); /* Purple glow */
+    border-radius: 2rem; /* Rounded corners */
+
+}
+
+.logo {
+    width: 15rem; /* Reduced width of the logo */
+}
+
+.vision-statement {
+    font-family: 'Chivo Mono', monospace; /* Font family */
+    font-weight: 300; /* Font weight */
+    font-size: 17px; /* Font size */
+    line-height: 30px; /* Line height */
+    letter-spacing: 0.10rem; /* Letter spacing (15%) */
+    text-align: center; /* Align text to the left */
+    color: #d1d5db; /* Text color */
+    max-width: 65rem; /* Maximum width of the text */
+    margin-top: 1rem; /* Move the vision statement up */
+    margin-right:9 rem; /* Align with the left margin */
+}
+
+.decorative-line {
+    position: relative;
+    background-color: #ed8936; /* Orange color */
+}
+
+.top-line {
+    top: 1rem; /* Position from the top */
+    left: 52%; /* Center horizontally */
+    transform: translateX(-50%); /* Shift left by half its width */
+    width: 45rem; /* Width of the line */
+    height: 0.25rem; /* Height of the line */
+}
+.bottom-line {
+    top: 33.5rem; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Shift left by half its width */
+    width: 100rem; /* Increased width (adjust this value as needed) */
+    height: 0.25rem; /* Height of the line */
+    background-color: #ed8936; /* Orange color */
+}
+
+.vertical-line {
+    display: none; /* Hide the vertical line */
+}
+
+.events-link {
+    font-family: 'Chivo Mono', monospace;
+    font-weight: 300;
+    font-size: 20px;
+    color: #ed8936; /* Orange color */
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+.events-link:hover {
+    text-decoration: underline;
+}

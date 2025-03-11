@@ -1,0 +1,120 @@
+/* Events Container */
+.events-container {
+  min-height: 100vh;
+  background-color: black; /* Solid black background */
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the title */
+  justify-content: center;
+}
+
+/* Events Title */
+.events-title {
+  font-family: 'Chivo Mono', monospace; /* Font family */
+  font-weight: 600; /* Font weight */
+  font-size: 68px; /* Font size */
+  line-height: 57.12px; /* Line height */
+  letter-spacing: 15%; /* Letter spacing */
+  text-align: center; /* Center the title */
+  margin-bottom: 1.5rem; /* Space below the title */
+  margin-top: 2.5rem; /* Increase margin-top to move it higher */
+}
+
+/* Event Name */
+.event-name {
+  font-family: 'Chivo Mono', monospace; /* Font family */
+  font-weight: 300; /* Font weight */
+  font-size: 36px; /* Font size */
+  line-height: 42.84px; /* Line height */
+  letter-spacing: 0.15em; /* Letter spacing (15%) */
+  text-align: center; /* Center the text */
+  color: #d1d5db; /* Text color */
+  margin-bottom: 2rem; /* Space below the event name */
+}
+
+/* Slider Container */
+.slider-container {
+  width: 100%; /* Full width of the container */
+  max-width: 1200px; /* Increase max-width for wider images */
+  margin: 1rem auto;
+}
+
+/* Slider Image */
+.slider-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Swiper Navigation and Pagination Styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ed8936; /* Orange color */
+}
+
+.swiper-pagination-bullet {
+  background: #d1d5db; /* Light gray */
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ed8936; /* Orange color */
+  opacity: 1;
+}
+
+/* Decorative Lines */
+.decorative-line {
+  position: absolute;
+  background-color: #ed8936; /* Orange color */
+}
+
+.title-line {
+  width: 100srem; /* Width of the line */
+  height: 0.25rem; /* Height of the line */
+  margin: o.5rem auto;
+  margin-bottom: 80rem; /* Center the line and add space */
+  position: relative; /* Change to relative for proper alignment */
+}
+
+.bottom-line {
+  bottom: 1.5rem; /* Position from the bottom */
+  right: 1.5rem; /* Position from the right */
+  width: 6rem; /* Width of the line */
+  height: 0.25rem; /* Height of the line */
+}
+
+.vertical-line {
+  bottom: 0rem; /* Position from the bottom */
+  right: 1.5rem; /* Position from the right */
+  height: 6rem; /* Height of the line */
+  width: 0.25rem; /* Width of the line */
+}
+
+.chat-here {
+  width: 28px;
+  height: auto;
+}
+
+.contact-button {
+  background-color: #ff7f32;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.contact-button:hover {
+  background-color: #e96c27;
+}
