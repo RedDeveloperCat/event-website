@@ -10,7 +10,7 @@ function MyNavbar() {
       <Container fluid>
         {/* <Navbar.Brand href="#">IETE Club</Navbar.Brand> */}
         <img src="/src/assets/sfit-logo.png" alt="IETE Club Logo" className="logo-img" />
-        <div className="logo"><span className="logo-span">IETE Club</span></div>
+        <div className="logo" onClick={() => window.open("https://your-link.com", "_blank")}><span className="logo-span" >IETE Club</span></div>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -37,13 +37,13 @@ function MyNavbar() {
             <Nav.Link href="#action1">SFIT</Nav.Link>
             <Nav.Link href="#action2">Gallery</Nav.Link>
           </Nav>
-          <Nav.Link href="#" disabled>
+          <Nav.Link href="#" onClick={() => window.open("https://www.youtube.com", "_blank")}>
           <img src="/src/assets/yt.svg" alt="s-m" className="social-media-link" />
             </Nav.Link>
-            <Nav.Link href="#" disabled>
+            <Nav.Link href="#" onClick={() => window.open("https://www.twitter.com", "_blank")}>
             <img src="/src/assets/twitter.svg" alt="s-m" className="social-media-link" />
             </Nav.Link>
-            <Nav.Link href="#" disabled>
+            <Nav.Link href="#" onClick={() => window.open("https://www.linkedin.com", "_blank")}>
             <img src="/src/assets/linkedin.svg" alt="s-m" className="social-media-link" />
             </Nav.Link>
         </Navbar.Collapse>

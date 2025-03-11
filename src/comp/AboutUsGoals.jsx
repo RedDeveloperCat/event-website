@@ -19,39 +19,37 @@ const AboutUsGoals = () => {
 
   return (
     <div className="about-us-container">
-      <div className="container">
-        <h1>ABOUT US</h1>
-        <h2>IETE SFIT</h2>
-        <div className="orange-line"></div>
+      <h1 className="section-title">About Us</h1>
+      <h2 className="sub-title">IETE SFIT</h2>
 
-        {/* Image Slider */}
-        <div className="slider">
-          <button onClick={prevSlide} className="nav-btn left-btn">❮</button>
-          <div className="slide-container">
-            <img src={images[current]} alt="Slider" className="slide-img" />
-          </div>
-          <button onClick={nextSlide} className="nav-btn right-btn">❯</button>
-        </div>
-
-        {/* Gallery Button */}
-        <button className="gallery-btn">Gallery</button>
-
-        {/* About Us Text */}
-        <p className="about-text">
-          The Institute of Electrical and Electronics Engineering (IETE) is an International organization, which has been the nexus for propagating scientific expertise among people all over the globe. IETE continues to attract students, faculty, and professionals from various fields all around the world and is committed to incorporating diversity in thoughts which is essential for scientific development.
-        </p>
-
-        <div className="orange-line"></div>
-
-        {/* Goals Section */}
-        <h2 className="goals-heading">GOALS</h2>
-        <ul className="goals-list">
-          <li>Inspire, Enable, Empower, and Energize our student members to enhance their technical interests.</li>
-          <li>Inspire, Enable, Empower, and Energize our student members to enhance their technical interests.</li>
-          <li>Inspire, Enable, Empower, and Energize our student members to enhance their technical interests.</li>
-        </ul>
-        <div className="orange-line"></div>
+      <div className="slider-container">
+        <button onClick={prevSlide} className="slider-btn left">❮</button>
+        <img src={images[current]} alt="Slider" className="slider-img" />
+        <button onClick={nextSlide} className="slider-btn right">❯</button>
       </div>
+
+      <div className="dots">
+        {images.map((_, index) => (
+          <span key={index} className={`dot ${current === index ? "active" : ""}`}></span>
+        ))}
+      </div>
+
+      <button className="gallery-btn">Gallery ➤</button>
+
+      <p className="about-text">
+        The Institute of Electrical and Electronics Engineering (IETE) is an international organization, fostering scientific expertise worldwide. IETE attracts students, faculty, and professionals across various fields and promotes diversity in thought, crucial for scientific progress.
+      </p>
+
+      <p className="about-text">
+        IEEE serves as a hub for engineering students and faculty to express their technical knowledge globally, remaining at the forefront of technical innovation.
+      </p>
+
+      <h2 className="goals-heading">Goals</h2>
+      <ul className="goals-list">
+        <li>Inspire, Enable, Empower, and Energize students to enhance their technical interests.</li>
+        <li>Encourage knowledge-sharing and skill development through collaborative learning.</li>
+        <li>Provide a platform for innovation, leadership, and professional growth.</li>
+      </ul>
     </div>
   );
 };
