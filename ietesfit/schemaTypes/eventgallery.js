@@ -1,29 +1,35 @@
 export default {
-    name: "eventGallery",
-    title: "Event Gallery",
-    type: "document",
-    fields: [
-      {
-        name: "title",
-        title: "Event Title",
-        type: "string",
-      },
-      {
-        name: "date",
-        title: "Event Date",
-        type: "string",
-      },
-      {
-        name: "images",
-        title: "Event Images",
-        type: "array",
-        of: [{ type: "image" }],
-      },
-      {
-        name: "redirectUrl",
-        title: "Redirect URL",
-        type: "url",
-      },
-    ],
-  };
-  
+  name: "eventGallery",
+  title: "Event Gallery",
+  type: "document",
+  fields: [
+    {
+      name: "title",
+      title: "Event Title",
+      type: "string",
+    },
+    {
+      name: "images",
+      title: "Event Images",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "eventName",
+              title: "Event Name",
+              type: "string",
+            },
+            {
+              name: "asset",
+              title: "Image",
+              type: "image",
+              options: { hotspot: true },
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
