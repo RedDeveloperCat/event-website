@@ -1,20 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import sanityClient from "../sanity/sanityconfig"// Import your Sanity client
 import "./AboutUsGoals.css";
-import img1 from "../assets/about/img1.jpg";
-import img2 from "../assets/about/img2.jpg";
-import img3 from "../assets/about/img3.jpg";
-import img4 from "../assets/about/img4.jpg";
 
 const AboutUsGoals = () => {
-  const images = [img1, img2, img3, img4];
+  const [images, setImages] = useState([]);
   const [current, setCurrent] = useState(0);
 
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "aboutUs"][0]{
+          images[]{asset->{url}}
+        }`
+      )
+      .then((data) => {
+        const fetchedImages = data?.images?.map((img) => img.asset.url) || [];
+        setImages(fetchedImages);
+      })
+      .catch(console.error);
+  }, []);
+
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % images.length);
+    if (images.length > 0) {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }
   };
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+    if (images.length > 0) {
+      setCurrent((prev) => (prev - 1 + images.length) % images.length);
+    }
   };
 
   return (
@@ -24,13 +39,21 @@ const AboutUsGoals = () => {
 
       <div className="slider-container">
         <button onClick={prevSlide} className="slider-btn left">❮</button>
-        <img src={images[current]} alt="Slider" className="slider-img" />
+        {images.length > 0 ? (
+          <img src={images[current]} alt="Slider" className="slider-img" />
+        ) : (
+          <p>Loading images...</p>
+        )}
         <button onClick={nextSlide} className="slider-btn right">❯</button>
       </div>
 
       <div className="dots">
         {images.map((_, index) => (
-          <span key={index} className={`dot ${current === index ? "active" : ""}`}></span>
+          <span
+            key={index}
+            className={`dot ${current === index ? "active" : ""}`}
+            onClick={() => setCurrent(index)} // Allow users to click on dots
+          ></span>
         ))}
       </div>
 
