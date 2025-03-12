@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import EFFECT from 'vanta/src/vanta.dots'
 import './Hero.css'
 
-function Hero() {
+const Hero=()=>{
     useEffect(() => {
         EFFECT({
           el: '#vanta',
