@@ -1,22 +1,29 @@
 import { useState, useEffect } from "react";
-import sanityClient from "../sanity/sanityconfig"
+import sanityClient from "../sanity/sanityconfig";
+import imageUrlBuilder from "@sanity/image-url";
 import "./Gallery.css";
+
+// Set up the image URL builder
+const builder = imageUrlBuilder(sanityClient);
 
 const Gallery = () => {
   const [sliderImages, setSliderImages] = useState([]);
   const [currentImage, setCurrentImage] = useState(0);
   const [events, setEvents] = useState([]);
 
+  // Function to get the image URL
+  const urlFor = (source) => builder.image(source).url();
+
   // Fetch event slider images
   useEffect(() => {
     sanityClient
       .fetch(
         `*[_type == "eventslider"][0]{
-          images[]{asset->{url}}
+          images[]{asset->{_id, url}}
         }`
       )
       .then((data) => {
-        const fetchedImages = data?.images?.map((img) => img.asset.url) || [];
+        const fetchedImages = data?.images?.map((img) => urlFor(img.asset)) || [];
         setSliderImages(fetchedImages);
       })
       .catch(console.error);
@@ -26,10 +33,10 @@ const Gallery = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "eventGallery"]{
+        `*[_type == "event"]{
           title,
           date,
-          images[]{asset->{url}},
+          images[]{asset->{_id, url}},
           redirectUrl
         }`
       )
@@ -88,7 +95,9 @@ const Gallery = () => {
                 {event.images.length > 0 ? (
                   <div className="event-carousel">
                     {event.images.map((img, imgIndex) => (
-                      <img key={imgIndex} src={img.asset.url} alt={event.title} className="event-img" />
+                      <div key={imgIndex} className="event-img-container">
+                        <img src={urlFor(img.asset)} alt={event.title} className="event-img" />
+                      </div>
                     ))}
                   </div>
                 ) : (
@@ -96,9 +105,12 @@ const Gallery = () => {
                 )}
               </div>
 
-              <a href={event.redirectUrl} target="_blank" rel="noopener noreferrer" className="event-link">
-                View More ➜
-              </a>
+              {/* Event Redirect URL */}
+              {event.redirectUrl && (
+                <a href={event.redirectUrl} target="_blank" rel="noopener noreferrer" className="event-link">
+                  View More ➜
+                </a>
+              )}
             </div>
           ))
         ) : (
