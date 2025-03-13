@@ -11,7 +11,7 @@ const TeamSection = ({ team }) => {
 
   const titleStyle = {
     color: "white",
-    fontSize: "18px",
+    fontSize: "20px",
     fontFamily: "monospace",
     marginBottom: "40px",
     textAlign: "center",

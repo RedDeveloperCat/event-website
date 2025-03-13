@@ -1,0 +1,16 @@
+.title-container {
+  background: transparent;
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Chivo Mono", sans-serif;
+}
+.team-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }

@@ -1,7 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import './MyNavbar.css'
 
 function MyNavbar() {
@@ -39,14 +38,14 @@ function MyNavbar() {
             <Nav.Link href="#action1">SFIT</Nav.Link>
             <Nav.Link href="#action2">Gallery</Nav.Link>
           </Nav>
-          <Nav.Link href="#" onClick={() => window.open("https://www.youtube.com", "_blank")}>
-          <img src="/src/assets/yt.svg" alt="s-m" className="social-media-link" />
-            </Nav.Link>
-            <Nav.Link href="#" onClick={() => window.open("https://www.twitter.com", "_blank")}>
-            <img src="/src/assets/twitter.svg" alt="s-m" className="social-media-link" />
+          <Nav.Link href="#" onClick={() => window.open("https://www.instagram.com", "_blank")}>
+          <img src="/src/assets/instagram.png" alt="s-m" className="social-media-link" />
             </Nav.Link>
             <Nav.Link href="#" onClick={() => window.open("https://www.linkedin.com", "_blank")}>
-            <img src="/src/assets/linkedin.svg" alt="s-m" className="social-media-link" />
+            <img src="/src/assets/linkedin.png" alt="s-m" className="social-media-link" />
+            </Nav.Link>
+            <Nav.Link href="#" onClick={() => window.open("https://www.twitter.com", "_blank")}>
+            <img src="/src/assets/twitter.png" alt="s-m" className="social-media-link" />
             </Nav.Link>
         </Navbar.Collapse>
       </Container>

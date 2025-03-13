@@ -51,7 +51,7 @@ function Footer() {
               <img src="/src/assets/linkedin.svg" alt="s-m" className="footer-social-media-link" />
             </a>
             <a href="#">
-              <img src="/src/assets/instagram.svg" alt="s-m" className="footer-social-media-link" />
+              <img src="/src/assets/instagram.png" alt="s-m" className="footer-social-media-link" />
             </a>
           </div>
 
