@@ -21,7 +21,7 @@ const ContactForm = () => {
             <input type="email" placeholder="Email" />
             <input type="tel" placeholder="Phone No" />
             <textarea placeholder="Message" rows="4"></textarea>
-            <button className="contact-page-button">Contact Us</button>
+            <button className="contact-page-button">Contact Us ➤</button>
           </div>
         </form>
 

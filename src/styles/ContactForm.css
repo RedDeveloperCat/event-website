@@ -15,11 +15,12 @@
   overflow: hidden;
 }
 
-.contact-page-heading { 
+.contact-page-heading {
   color: white;
-  letter-spacing: 3px;
-  font-size: 48px;
-  font-family: 'Chivo Mono', monospace;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 20px 0;
 }
 
 /* Orange Line Styling */
@@ -144,7 +145,7 @@
   width: 100%;
   max-width: 600px;
   background: none;
-  color:white;
+  color: white;
   padding: 1rem;
   text-align: center;
 }
