@@ -19,7 +19,7 @@ const Hero=()=>{
             <div className="bg" id="vanta">
             <div className="content">
                 <h1 className="title">IETE Committee</h1>
-                <div className="logo-container">
+                <div className="hr-logo-container">
                     <img src="src/assets/iete-rectangle.jpg" alt="IETE SFIT" className="logo" />
                 </div>
                 <p className="tagline">&gt; Empowering Tech of Today.</p>

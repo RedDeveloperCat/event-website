@@ -20,10 +20,10 @@ html, body {
 
 /* Gallery title */
 .gallery-title {
-    font-size: 24px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 20px 0;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 20px 0;
 }
 
 /* Slider container */

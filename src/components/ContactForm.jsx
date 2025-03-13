@@ -1,34 +1,33 @@
 "use client";
 
 import { useState } from "react";
-import Footer from "./Footer.jsx"; // Import the Hero component
 import "../styles/ContactForm.css";
 
 const ContactForm = () => {
   const [showDetails, setShowDetails] = useState(true);
 
   return (
-    <div className="contact-page">
+    <div className="contact-page-container">
       {/* Orange Line */}
-      <div className="orange-line"></div>
-      <h1 className="headingC">Contact</h1>
+      <div className="contact-page-orange-line"></div>
+      <h1 className="contact-page-heading">Contact</h1>
 
       {/* Main Content */}
-      <div className="content">
+      <div className="contact-page-content">
         {/* Form Section */}
         <form>
-          <div className="form-section">
+          <div className="contact-page-form-section">
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <input type="tel" placeholder="Phone No" />
             <textarea placeholder="Message" rows="4"></textarea>
-            <button className="contact-button">Contact Us</button>
+            <button className="contact-page-button">Contact Us</button>
           </div>
         </form>
 
         {/* Show Details Button (Mobile Only) */}
         <button
-          className="show-details-button"
+          className="contact-page-show-details"
           onClick={() => setShowDetails(prev => !prev)}
         >
           Show Details
@@ -49,7 +48,7 @@ const ContactForm = () => {
       </div>
 
       {/* Orange Line */}
-      <div className="orange-line"></div>
+      <div className="contact-page-orange-line"></div>
    </div>
   );
 };

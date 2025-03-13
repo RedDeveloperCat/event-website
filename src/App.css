@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-@keyframes rollingGradient {
+/* @keyframes rollingGradient {
   0% {
     background: radial-gradient(circle at -20% 50%, rgba(40, 42, 104, 0.8) 20%, rgba(10, 10, 20, 1) 80%);
   }
@@ -19,15 +19,16 @@
   100% {
     background: radial-gradient(circle at 120% 50%, rgba(40, 42, 104, 0.8) 20%, rgba(10, 10, 20, 1) 80%);
   }
-}
+} */
 
 body {
-  animation: rollingGradient 30s infinite linear;
+  /* animation: rollingGradient 30s infinite linear; */
+  background: radial-gradient(circle, rgba(40, 42, 104, 0.8) 20%, rgba(10, 10, 20, 1) 80%);
   background-attachment: fixed;
   background-size: cover;
   transition: background 0.1s ease-in-out; /* Smooth transition effect */
 }
-/*
+/* 
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -62,5 +63,4 @@ body {
 
 .read-the-docs {
   color: #888;
-}
-*/
+} */

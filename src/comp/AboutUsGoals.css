@@ -99,9 +99,10 @@
   }
   
   .goals-heading {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 40px 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 20px 0;
   }
   
   .goals-list {

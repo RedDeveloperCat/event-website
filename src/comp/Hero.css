@@ -37,13 +37,13 @@
     font-size: 48px;
 }
 
-.logo-container {
+.hr-logo-container {
     /* background: rgba(0, 0, 0, 0.0); */
     padding: 10px;
     /* border-radius: 10px; */
 }
 
-.logo-container img {
+.hr-logo-container img {
     box-shadow: 0 0 50px 10px rgba(128, 0, 128, 0.6); /* Purple glow */
 }
 
