@@ -4,52 +4,58 @@ import { useState } from "react";
 import "../styles/ContactForm.css";
 
 const ContactForm = () => {
-  const [showDetails, setShowDetails] = useState(true);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Ensure required fields are filled
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Name, Email, and Message are required!");
+      return;
+    }
+
+    // Generate mailto link
+    const mailtoLink = `mailto:ietesfit@gmail.com?subject=Contact Request from ${formData.name}&body=
+      Name: ${encodeURIComponent(formData.name)}%0A
+      Email: ${encodeURIComponent(formData.email)}%0A
+      Phone: ${encodeURIComponent(formData.phone || "N/A")}%0A
+      Message: ${encodeURIComponent(formData.message)}`;
+
+    // Open the mail client
+    window.location.href = mailtoLink;
+  };
 
   return (
     <div className="contact-page-container">
-      {/* Orange Line */}
       <div className="contact-page-orange-line"></div>
       <h1 className="contact-page-heading">Contact</h1>
 
-      {/* Main Content */}
       <div className="contact-page-content">
-        {/* Form Section */}
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="contact-page-form-section">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="tel" placeholder="Phone No" />
-            <textarea placeholder="Message" rows="4"></textarea>
-            <button className="contact-page-button">Contact Us ➤</button>
+            <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
+            <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+            <input type="tel" name="phone" placeholder="Phone No" value={formData.phone} onChange={handleChange} />
+            <textarea name="message" placeholder="Message" rows="4" value={formData.message} onChange={handleChange} required></textarea>
+            <button type="submit" className="contact-page-button">
+              Contact Us ➤
+            </button>
           </div>
         </form>
-
-        {/* Show Details Button (Mobile Only) */}
-        <button
-          className="contact-page-show-details"
-          onClick={() => setShowDetails(prev => !prev)}
-        >
-          Show Details
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </button>
       </div>
 
-      {/* Orange Line */}
       <div className="contact-page-orange-line"></div>
-   </div>
+    </div>
   );
 };
 
