@@ -114,7 +114,10 @@
 /* Tablet (1024px and below) */
 @media (max-width: 1024px) {
     .events-title {
-        font-size: 42px;
+        font-size: 24px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 20px 0;
     }
 
     .event-name {

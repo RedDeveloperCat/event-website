@@ -60,18 +60,28 @@ const AboutUsGoals = () => {
       <button className="gallery-btn">Gallery ➤</button>
 
       <p className="about-text">
-        The Institute of Electrical and Electronics Engineering (IETE) is an international organization, fostering scientific expertise worldwide. IETE attracts students, faculty, and professionals across various fields and promotes diversity in thought, crucial for scientific progress.
+        The IETE student Chapter at SFIT started in 2008. The objectives of this student forum are as follows
+        To keep the students updated with technological developments in the field of Electronics
+        & Telecommunication. To provide them a platform to develop their technical and managerial skills by organizing various technical events such as seminars, workshops, project competitions and technical paper presentations to name a few.
+
       </p>
 
       <p className="about-text">
-        IEEE serves as a hub for engineering students and faculty to express their technical knowledge globally, remaining at the forefront of technical innovation.
+        It offers educational programs, certifications and conducts examinations, while also organizing conferences, workshops, placement talks, technical events. The endeavor of IETE-SFIT student Chapter is to spread awareness about the state- of-the-art technologies used in industries and develop all-round skills of engineers keeping in mind the interest of students.
       </p>
 
       <h2 className="goals-heading">Goals</h2>
       <ul className="goals-list">
-        <li>Inspire, Enable, Empower, and Energize students to enhance their technical interests.</li>
-        <li>Encourage knowledge-sharing and skill development through collaborative learning.</li>
-        <li>Provide a platform for innovation, leadership, and professional growth.</li>
+        <li>Professional Development: Workshops,seminars, and conferences to enhance technical and professional skills.
+        </li>
+        <li>Certifications: Opportunities to earn professional certifications and recognition.</li>
+        <li>Networking: Connect with industry professionals, academicians, and peers through events and local chapters.</li>
+        <li>Career Support: Placement talks, job fairs, and guidance from experienced professionals.
+        </li>
+        <li>Research Opportunities: Platforms to present and publish research work.</li>
+        <li>Recognition: Awards and honors for outstanding contributions and
+          achievements in the field.
+        </li>
       </ul>
     </div>
   );

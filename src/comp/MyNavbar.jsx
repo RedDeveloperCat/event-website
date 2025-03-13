@@ -10,7 +10,7 @@ function MyNavbar() {
       <Container fluid>
         {/* <Navbar.Brand href="#">IETE Club</Navbar.Brand> */}
         <img src="/src/assets/sfit-logo.png" alt="IETE Club Logo" className="logo-img" />
-        <div className="logo" onClick={() => window.open("https://your-link.com", "_blank")}><span className="logo-span" >IETE Club</span></div>
+        <div className="logo" onClick={() => window.open("https://your-link.com", "_blank")}><span className="logo-span" >IETE SFIT</span></div>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -18,7 +18,7 @@ function MyNavbar() {
             style={{ maxHeight: '160px' }}
             navbarScroll
           >
-          <NavDropdown title="About Us" id="navbarScrollingDropdown">
+          {/* <NavDropdown title="About Us" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
@@ -33,7 +33,9 @@ function MyNavbar() {
               <NavDropdown.Item href="#action5">
                 Something else here
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
+            <Nav.Link href="#action1">About Us</Nav.Link>
+            <Nav.Link href="#action1">Events</Nav.Link>
             <Nav.Link href="#action1">SFIT</Nav.Link>
             <Nav.Link href="#action2">Gallery</Nav.Link>
           </Nav>

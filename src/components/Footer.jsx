@@ -35,7 +35,7 @@ function Footer() {
 
           <p className="footer-about">
             <span>ABOUT US </span>
-            IETE is a premier professional society in India, founded in 1953,
+            The IETE student Chapter at SFIT started in 2008,
             dedicated to the advancement of Electronics & Telecommunication.
           </p>
 

@@ -75,6 +75,7 @@
   margin-bottom: 2rem;
   background-color: transparent;
   border: 2px solid #433953;
+  color: #fff;
   border-radius: 10px;
   color: transparent;
   font-size: 1rem;
@@ -96,6 +97,7 @@
   border: 2px solid #ff6b2b;
   box-shadow: 0 0 8px rgba(255, 107, 43, 0.5);
   outline: none;
+  color: #fff;
 }
 
 /* Contact Button */
