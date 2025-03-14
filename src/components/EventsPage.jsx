@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import sanityClient from "../sanity/sanityconfig";
 import imageUrlBuilder from "@sanity/image-url";
+import { motion } from "framer-motion"; // Import framer-motion
 import "../styles/EventsPage.css";
 import { useNavigate } from "react-router-dom";
 
@@ -51,13 +52,20 @@ const EventsPage = () => {
           >
             {event.images.map((image, index) => (
               <Carousel.Item key={index}>
-                <div className="image-container">
+                {/* Motion div with animation */}
+                <motion.div
+                  className="image-container"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.5 }} // Triggers animation when 50% of the element is in view
+                  transition={{ duration: 1 }}
+                >
                   <img
                     src={urlFor(image.asset)}
                     alt={image.eventName}
                     className="d-block w-100 slider-image"
                   />
-                </div>
+                </motion.div>
                 <Carousel.Caption>
                   <p className="event-name-overlay">{image.eventName}</p>
                 </Carousel.Caption>
@@ -68,9 +76,16 @@ const EventsPage = () => {
       ))}
 
       <div className="decorative-line vertical-line"></div>
-      <button className="contact-button" onClick={()=> navigate('/gallery#event-gallery')}>
+      <motion.button
+        className="contact-button"
+        onClick={() => navigate('/gallery#event-gallery')}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
         Events <img src="/calendar.png" alt="calendar" className="chat-here" />
-      </button>
+      </motion.button>
     </div>
   );
 };

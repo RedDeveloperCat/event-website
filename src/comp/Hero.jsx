@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import * as VANTA from "vanta";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 import DOTS from "vanta/dist/vanta.dots.min";
 import "./Hero.css";
 import { useNavigate } from "react-router-dom";
@@ -32,20 +32,45 @@ const Hero = () => {
     <div className="hero-container">
       <div className="bg" id="vanta">
         <div className="content">
-          <h1 className="title">IETE Committee</h1>
-          <div className="hr-logo-container">
+          <motion.h1
+            className="title"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5 }}
+          >
+            IETE Committee
+          </motion.h1>
+
+          <motion.div
+            className="hr-logo-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+          >
             <img src={logo} alt="IETE SFIT" className="logo" />
-          </div>
-          <p className="tagline">&gt; Empowering Tech of Today.</p>
-          <button
+          </motion.div>
+
+          <motion.p
+            className="tagline"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: 1 }}
+          >
+            &gt; Empowering Tech of Today.
+          </motion.p>
+
+          <motion.button
             className="contact-button"
             onClick={() => navigate("/contactus")}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: 1.5 }}
           >
             Contact Us{" "}
             <span className="chat-icon">
               <img src={chatIcon} alt="chat" className="chat-here" />
             </span>
-          </button>
+          </motion.button>
         </div>
       </div>
     </div>
