@@ -9,7 +9,7 @@ function Footer() {
 
         <div className="footer-section-left">
           <div className="footer-logo-container">
-            <img src="src/assets/iete-rectangle.jpg" alt="IETE SFIT" className="footer-logo" />
+            <img src="/iete-rectangle.jpg" alt="IETE SFIT" className="footer-logo" />
           </div>
 
         </div>
@@ -41,17 +41,17 @@ function Footer() {
 
           <div className="footer-social-icons">
             <a href="#">
-              <img src="/src/assets/yt.svg" alt="s-m" className="footer-social-media-link" />
+              <img src="/yt.svg" alt="s-m" className="footer-social-media-link" />
             </a>
             <a href="#">
-              <img src="/src/assets/twitter.svg" alt="s-m" className="footer-social-media-link" />
+              <img src="/twitter.svg" alt="s-m" className="footer-social-media-link" />
             </a>
 
             <a href="#">
-              <img src="/src/assets/linkedin.svg" alt="s-m" className="footer-social-media-link" />
+              <img src="/linkedin.svg" alt="s-m" className="footer-social-media-link" />
             </a>
             <a href="#">
-              <img src="/src/assets/instagram.png" alt="s-m" className="footer-social-media-link" />
+              <img src="/instagram.png" alt="s-m" className="footer-social-media-link" />
             </a>
           </div>
 

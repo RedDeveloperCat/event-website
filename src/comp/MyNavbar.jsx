@@ -11,7 +11,7 @@ function MyNavbar() {
       <Container fluid>
         {/* <Navbar.Brand href="#">IETE Club</Navbar.Brand> */}
         <img
-          src="/src/assets/sfit-logo.png"
+          src="/sfit-logo.png"
           alt="IETE Club Logo"
           className="logo-img"
           onClick={() => navigate("/")}
@@ -62,7 +62,7 @@ function MyNavbar() {
             onClick={() => window.open("https://www.instagram.com", "_blank")}
           >
             <img
-              src="/src/assets/instagram.png"
+              src="/instagram.png"
               alt="s-m"
               className="social-media-link"
             />
@@ -72,7 +72,7 @@ function MyNavbar() {
             onClick={() => window.open("https://www.linkedin.com", "_blank")}
           >
             <img
-              src="/src/assets/linkedin.png"
+              src="/linkedin.png"
               alt="s-m"
               className="social-media-link"
             />
@@ -82,7 +82,7 @@ function MyNavbar() {
             onClick={() => window.open("https://www.twitter.com", "_blank")}
           >
             <img
-              src="/src/assets/twitter.png"
+              src="/twitter.png"
               alt="s-m"
               className="social-media-link"
             />

@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import DOTS from "vanta/dist/vanta.dots.min";
 import "./Hero.css";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/iete-rectangle.jpg";
-import chatIcon from "../assets/chat-icon.svg";
+import logo from "/iete-rectangle.jpg";
+import chatIcon from "/chat-icon.svg";
 
 const Hero = () => {
   const navigate = useNavigate();

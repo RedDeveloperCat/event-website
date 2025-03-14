@@ -67,7 +67,7 @@ const EventsPage = () => {
 
       <div className="decorative-line vertical-line"></div>
       <button className="contact-button">
-        Events <img src="src/assets/calendar.png" alt="calendar" className="chat-here" />
+        Events <img src="/calendar.png" alt="calendar" className="chat-here" />
       </button>
     </div>
   );
