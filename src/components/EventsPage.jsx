@@ -9,7 +9,7 @@ const urlFor = (source) => builder.image(source).width(1200).url();
 
 const EventsPage = () => {
   const [events, setEvents] = useState([]);
-  const [ setCurrentEventName] = useState("");
+  const [currentEventName, setCurrentEventName] = useState("");
 
   useEffect(() => {
     sanityClient
