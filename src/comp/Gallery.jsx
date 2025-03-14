@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import sanityClient from "../sanity/sanityconfig";
 import imageUrlBuilder from "@sanity/image-url";
+import Carousel from 'react-bootstrap/Carousel';
 import "./Gallery.css";
 
 // Set up the image URL builder
 const builder = imageUrlBuilder(sanityClient);
 
+// Function to get the image URL
+const urlFor = (source) => builder.image(source).url();
+
 const Gallery = () => {
   const [sliderImages, setSliderImages] = useState([]);
-  const [currentImage, setCurrentImage] = useState(0);
   const [events, setEvents] = useState([]);
-
-  // Function to get the image URL
-  const urlFor = (source) => builder.image(source).url();
 
   // Fetch event slider images
   useEffect(() => {
@@ -44,46 +44,28 @@ const Gallery = () => {
       .catch(console.error);
   }, []);
 
-  const nextImage = () => {
-    if (sliderImages.length > 0) {
-      setCurrentImage((prev) => (prev + 1) % sliderImages.length);
-    }
-  };
-
-  const prevImage = () => {
-    if (sliderImages.length > 0) {
-      setCurrentImage((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
-    }
-  };
-
   return (
     <div className="gallery-container">
       <h2 className="gallery-title">Gallery</h2>
-      
-      {/* Main Slider */}
+
+      {/* Main Slider using Bootstrap Carousel */}
       <div className="slider-container">
-        <button className="slider-btn left" onClick={prevImage}>&lt;</button>
         {sliderImages.length > 0 ? (
-          <img src={sliderImages[currentImage]} alt="Gallery" className="slider-img" />
+          <Carousel>
+            {sliderImages.map((img, index) => (
+              <Carousel.Item key={index}>
+                <img src={img} alt={`Slide ${index}`} className="d-block w-100 slider-img" />
+              </Carousel.Item>
+            ))}
+          </Carousel>
         ) : (
           <p>Loading images...</p>
         )}
-        <button className="slider-btn right" onClick={nextImage}>&gt;</button>
-      </div>
-
-      {/* Dots Indicator */}
-      <div className="dots">
-        {sliderImages.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentImage ? "active" : ""}`}
-            onClick={() => setCurrentImage(index)} // Clickable dots
-          ></span>
-        ))}
       </div>
 
       {/* Event Gallery */}
-      <div className="event-gallery">
+
+      <div className="event-gallery" id="event-gallery">
         {events.length > 0 ? (
           events.map((event, index) => (
             <div key={index} className="event-box">
@@ -91,19 +73,17 @@ const Gallery = () => {
               <p className="event-date">{event.date}</p>
 
               {/* Event Image Carousel */}
-              <div className="event-slider">
-                {event.images.length > 0 ? (
-                  <div className="event-carousel">
-                    {event.images.map((img, imgIndex) => (
-                      <div key={imgIndex} className="event-img-container">
-                        <img src={urlFor(img.asset)} alt={event.title} className="event-img" />
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <p>No images available</p>
-                )}
-              </div>
+              {event.images.length > 0 ? (
+                <Carousel>
+                  {event.images.map((img, imgIndex) => (
+                    <Carousel.Item key={imgIndex}>
+                      <img src={urlFor(img.asset)} alt={event.title} className="d-block w-100 event-img" />
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+              ) : (
+                <p>No images available</p>
+              )}
 
               {/* Event Redirect URL */}
               {event.redirectUrl && (

@@ -1,4 +1,5 @@
 .hero-container {
+    z-index: -1;
     position: relative;
     height: 100vh;
     display: flex;
@@ -9,8 +10,14 @@
     padding: 20px;
     color: white;
 }
-
+.contact-button {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 1000;
+  }
+  
 .bg {
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -18,8 +25,13 @@
     height: 100%;
     z-index: -1;
 }
-
+.hero-container,
 .content {
+    pointer-events: auto !important;
+    position: relative;
+}
+.content {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;

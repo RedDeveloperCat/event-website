@@ -2,15 +2,6 @@ import TeamSection from "./TeamSection";
 import "../styles/Team.css"
 
 const TeamStructure = ({ teams }) => {
-  const containerStyle = {
-    // minHeight: "100vh",
-    // background: "linear-gradient(to bottom, #0A051C, #1A1040)",
-    // display: "flex",
-    // flexDirection: "column",
-    // alignItems: "center",
-    // paddingTop: "80px",
-    // paddingBottom: "80px",
-};
 
 return (
   <div style={containerStyle}>

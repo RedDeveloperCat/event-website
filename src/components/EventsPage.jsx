@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/swiper-bundle.css";
-import "../styles/EventsPage.css";
-import sanityClient from "../sanity/sanityconfig"
+import { Carousel } from "react-bootstrap";
+import sanityClient from "../sanity/sanityconfig";
 import imageUrlBuilder from "@sanity/image-url";
+import "../styles/EventsPage.css";
 
 const builder = imageUrlBuilder(sanityClient);
-
-function urlFor(source) {
-  return builder.image(source);
-}
+const urlFor = (source) => builder.image(source).width(1200).url();
 
 const EventsPage = () => {
   const [events, setEvents] = useState([]);
-  const [currentEventName, setCurrentEventName] = useState("");
+  const [ setCurrentEventName] = useState("");
 
   useEffect(() => {
     sanityClient
@@ -29,8 +24,6 @@ const EventsPage = () => {
       )
       .then((data) => {
         setEvents(data);
-        console.log(data);
-        // Set the first event name as default
         if (data.length > 0 && data[0].images.length > 0) {
           setCurrentEventName(data[0].images[0].eventName);
         }
@@ -38,50 +31,43 @@ const EventsPage = () => {
       .catch(console.error);
   }, []);
 
-  const handleSlideChange = (swiper) => {
-    const currentImage = events[swiper.activeIndex]?.images[swiper.realIndex];
-    setCurrentEventName(currentImage?.eventName || "");
-  };
-
   return (
     <div className="events-container">
       <h2 className="events-title">Events</h2>
 
       {events.map((event, eventIndex) => (
-        <div key={eventIndex}>
-          {/* <p className="event-name">Events</p> */}
-          <div className="slider-container">
-            <Swiper
-              modules={[Navigation, Pagination]}
-              navigation
-              pagination={{ clickable: true }}
-              loop={true}
-              spaceBetween={30}
-              slidesPerView={1}
-              centeredSlides={true}
-              onSlideChange={handleSlideChange} // Add the slide change handler
-            >
-              {event.images.map((image, index) => (
-                <SwiperSlide key={index}>
+        <div key={eventIndex} className="event-block">
+          <Carousel
+            controls={true}
+            indicators={true}
+            interval={3000} // Auto-slide every 3s
+            fade
+            onSelect={(selectedIndex) => {
+              setCurrentEventName(event.images[selectedIndex]?.eventName || "");
+            }}
+            className="carousel-container"
+          >
+            {event.images.map((image, index) => (
+              <Carousel.Item key={index}>
+                <div className="image-container">
                   <img
-                    src={urlFor(image.asset).width(800).url()}
+                    src={urlFor(image.asset)}
                     alt={image.eventName}
-                    className="slider-image"
+                    className="d-block w-100 slider-image"
                   />
-                  <p  className="slider-image">{image.eventName}</p>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          {/* Display the current event name */}
-          <p className="event-name-display">{currentEventName}</p>
+                </div>
+                <Carousel.Caption>
+                  <p className="event-name-overlay">{image.eventName}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+            ))}
+          </Carousel>
         </div>
       ))}
 
-      {/* <div className="decorative-line vertical-line"></div> */}
+      <div className="decorative-line vertical-line"></div>
       <button className="contact-button">
-        Events ➤
+        Events <img src="src/assets/calendar.png" alt="calendar" className="chat-here" />
       </button>
     </div>
   );
