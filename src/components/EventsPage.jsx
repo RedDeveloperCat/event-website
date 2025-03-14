@@ -3,11 +3,13 @@ import { Carousel } from "react-bootstrap";
 import sanityClient from "../sanity/sanityconfig";
 import imageUrlBuilder from "@sanity/image-url";
 import "../styles/EventsPage.css";
+import { useNavigate } from "react-router-dom";
 
 const builder = imageUrlBuilder(sanityClient);
 const urlFor = (source) => builder.image(source).width(1200).url();
 
 const EventsPage = () => {
+  const navigate = useNavigate();
   const [events, setEvents] = useState([]);
   const [currentEventName, setCurrentEventName] = useState("");
 
@@ -66,7 +68,7 @@ const EventsPage = () => {
       ))}
 
       <div className="decorative-line vertical-line"></div>
-      <button className="contact-button">
+      <button className="contact-button" onClick={()=> navigate('/gallery#event-gallery')}>
         Events <img src="/calendar.png" alt="calendar" className="chat-here" />
       </button>
     </div>

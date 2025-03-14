@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import sanityClient from "../sanity/sanityconfig"; // Import your Sanity client
 import Carousel from 'react-bootstrap/Carousel';
 import "./AboutUsGoals.css";
+import { useNavigate } from "react-router-dom";
 
 const AboutUsGoals = () => {
+  const navigate = useNavigate();
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const AboutUsGoals = () => {
         )}
       </div>
 
-      <button className="gallery-btn">Gallery ➤</button>
+      <button className="gallery-btn"  onClick={()=> navigate('/gallery')}>Gallery ➤</button>
 
       <p className="about-text">
         The IETE student Chapter at SFIT started in 2008. The objectives of this student forum are as follows:
