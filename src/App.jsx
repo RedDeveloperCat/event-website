@@ -1,5 +1,5 @@
 import './App.css';
-import Hero from './comp/Hero';
+import Hero from './comp/hero';
 import MyNavbar from './comp/MyNavbar';
 import AboutUsGoals from './comp/AboutUsGoals';
 import Gallery from './comp/Gallery';
