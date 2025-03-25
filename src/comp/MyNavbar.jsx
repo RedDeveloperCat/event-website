@@ -56,6 +56,13 @@ function MyNavbar() {
             </Nav.Link>
 
             <Nav.Link href="/gallery">Gallery</Nav.Link>
+            <Nav.Link
+              href="https://drive.google.com/drive/folders/1ojwY1EK1pGlCHbOoiaMI_u0czV58InUg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reports
+            </Nav.Link>
           </Nav>
           <Nav.Link
             href="#"
