@@ -1,6 +1,6 @@
 /* General Styles */
 .events-container {
-    min-height: 100vh; /* Ensure the events container takes up the full screen height */
+    /* min-height: 100vh; */
     background: transparent;
     color: white;
     padding: 2rem;
@@ -17,7 +17,7 @@
   .events-title {
     font-family: 'Chivo Mono', monospace;
     font-weight: 600;
-    font-size: 48px;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 1.5rem;
     z-index: 2; /* Ensure it is on top of the content */
@@ -118,7 +118,7 @@
   /* Responsive Design */
   @media (max-width: 1024px) {
     .events-title {
-      font-size: 42px;
+      font-size: 24px;
     }
     
     .image-container {
@@ -137,7 +137,7 @@
   
   @media (max-width: 768px) {
     .events-title {
-      font-size: 32px;
+      font-size: 24px;
     }
   
     .image-container {

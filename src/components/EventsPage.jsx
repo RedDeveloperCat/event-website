@@ -36,7 +36,7 @@ const EventsPage = () => {
 
   return (
     <div className="events-container">
-      <h2 className="events-title">Events</h2>
+      <h2 className="events-title">EVENTS</h2>
 
       {events.map((event, eventIndex) => (
         <div key={eventIndex} className="event-block">

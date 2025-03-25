@@ -1,28 +1,22 @@
-// import React from "react";
-import '../styles/VisionPage.css'; // Ensure the case matches
+import '../styles/VisionPage.css';
 
 const VisionPage = () => {
   return (
-    <div className="container">
-      {/* Vision Title */}
-      <h2 className="title">Vision & Mission</h2>
+    <div className="visionpage-container">
+      <h2 className="visionpage-title">VISION & MISSION</h2>
 
-      {/* Image and Logo Section */}
-      <div className="image-section">
-        {/* College Building Image */}
+      <div className="visionpage-image-section">
         <img
-          src="/src/assets/college.jpg" // Path to the college building image
+          src="/src/assets/college.jpg"
           alt="College Building"
-          className="college-image"
+          className="visionpage-college-image"
         />
-        {/* Logo with Solid Background */}
-            <div className="logo-container">
-                    <img src="src/assets/iete-rectangle.jpg" alt="IETE SFIT" className="logo" />
-            </div>
+        <div className="visionpage-logo-container">
+          <img src="src/assets/iete-rectangle.png" alt="IETE SFIT" className="visionpage-logo" />
+        </div>
       </div>
 
-      {/* Vision Statement */}
-      <p className="vision-statement">
+      <p className="visionpage-statement">
         IETE aims to achieve this by expanding educational programs, increasing opportunities for
         hands-on learning, fostering innovation and research, and strengthening industry-academic
         collaborations. IETE wants the students to continuously enhance their technical expertise,
@@ -30,8 +24,7 @@ const VisionPage = () => {
         rapidly evolving technological fields and become leaders in the global tech community.
       </p>
 
-      {/* Decorative Lines */}
-      <div className="decorative-line top-line"></div>
+      {/* <div className="visionpage-decorative-line visionpage-top-line"></div> */}
     </div>
   );
 };
