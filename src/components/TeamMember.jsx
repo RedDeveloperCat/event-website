@@ -1,5 +1,5 @@
 const TeamMember = ({ name, image, size }) => {
-  const circleSize = size === "large" ? "80px" : "60px";
+  const circleSize = size === "large" ? "100px" : "90px";
 
   const containerStyle = {
     display: "flex",
