@@ -93,9 +93,10 @@
   .about-text {
     max-width: 80%;
     margin: 30px auto;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
     text-align: justify;
+    font-family: "Baskervville";
   }
   
   .goals-heading {
@@ -115,9 +116,10 @@
   
   .goals-list li {
     margin: 15px 0;
-    font-size: 16px;
+    font-size: 18px;
     padding-left: 20px;
     position: relative;
+    font-family: "Baskervville";
   }
   
   .goals-list li::before {

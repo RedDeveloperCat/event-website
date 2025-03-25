@@ -22,7 +22,8 @@
   }
   
   * {
-	font-family: 'Chivo Mono', monospace;
+	font-family: 'Chivo Mono', "Baskervville";
+	/* font-family: "Baskervville"; */
   }
   
   .footer-container .footer-section-left,

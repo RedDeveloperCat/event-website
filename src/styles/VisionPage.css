@@ -60,7 +60,7 @@
 }
 
 .visionpage-statement {
-    font-family: 'Chivo Mono', monospace;
+    font-family: "Baskervville";
     font-weight: 300;
     font-size: 17px;
     line-height: 1.5;
@@ -68,7 +68,7 @@
     text-align: center;
     color: #d1d5db;
     max-width: 65rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-right: 2rem;
 }
 
