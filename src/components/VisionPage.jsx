@@ -7,12 +7,12 @@ const VisionPage = () => {
 
       <div className="visionpage-image-section">
         <img
-          src="/src/assets/college.jpg"
+          src="college.jpg"
           alt="College Building"
           className="visionpage-college-image"
         />
         <div className="visionpage-logo-container">
-          <img src="src/assets/iete-rectangle.png" alt="IETE SFIT" className="visionpage-logo" />
+          <img src="iete-rectangle.jpg" alt="IETE SFIT" className="visionpage-logo" />
         </div>
       </div>
 

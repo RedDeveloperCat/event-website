@@ -24,8 +24,8 @@ function App() {
                                 <MyNavbar />
                                 <Hero />
                                 <AboutUsGoals />
-                                <EventsPage />
                                 <VisionPage />
+                                <EventsPage />
                                 <TeamPage />
                                 {/* <ContactForm /> */}
                                 <Footer />
