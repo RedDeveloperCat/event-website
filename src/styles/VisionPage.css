@@ -60,7 +60,7 @@
 }
 
 .visionpage-statement {
-    font-family: 'Chivo Mono', monospace;
+    font-family: "Baskervville";
     font-weight: 300;
     font-size: 17px;
     line-height: 1.5;
@@ -68,7 +68,7 @@
     text-align: center;
     color: #d1d5db;
     max-width: 65rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-right: 2rem;
 }
 
@@ -105,6 +105,22 @@
 
 .visionpage-events-link:hover {
     text-decoration: underline;
+}
+
+.vision-btn {
+  background-color: #ff6600;
+  color: #ffffff;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 30px 0;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.vision-btn:hover {
+  background-color: #e65c00;
 }
 
 /* For Tablets and Smaller Screens */
