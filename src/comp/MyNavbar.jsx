@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 import "./MyNavbar.css";
 import { useNavigate } from "react-router-dom";
 
@@ -55,7 +56,7 @@ function MyNavbar() {
               SFIT
             </Nav.Link>
 
-            <Nav.Link href="/gallery">Gallery</Nav.Link>
+            <Nav.Link as={Link} to="/gallery">Gallery</Nav.Link>
 
             <Nav.Link
               href="https://drive.google.com/drive/folders/1ojwY1EK1pGlCHbOoiaMI_u0czV58InUg"
@@ -66,7 +67,7 @@ function MyNavbar() {
             </Nav.Link>
 
             <Nav.Link
-              href="https://drive.google.com/"
+              href="https://drive.google.com/drive/folders/18e-vmhSyp6MWnVtSb_HHEsKup_q0BYsb?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -76,7 +77,7 @@ function MyNavbar() {
           </Nav>
           <Nav.Link
             href="#"
-            onClick={() => window.open("https://www.instagram.com", "_blank")}
+            onClick={() => window.open("https://www.instagram.com/iete_sfit?igsh=dTR3cW1hMG9ubDgz", "_blank")}
           >
             <img
               src="/instagram.png"
