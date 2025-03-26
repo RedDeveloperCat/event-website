@@ -44,7 +44,7 @@ function Footer() {
               <img src="/yt.svg" alt="s-m" className="footer-social-media-link" />
             </a>
             <a href="#">
-              <img src="/twitter.svg" alt="s-m" className="footer-social-media-link" />
+              <img src="/twitter.png" alt="s-m" className="footer-social-media-link" />
             </a>
 
             <a href="#">

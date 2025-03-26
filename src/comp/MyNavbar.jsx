@@ -26,7 +26,7 @@ function MyNavbar() {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "220px" }}
+            style={{ maxHeight: "260px" }}
             navbarScroll
           >
             {/* <NavDropdown title="About Us" id="navbarScrollingDropdown">
@@ -63,6 +63,14 @@ function MyNavbar() {
               rel="noopener noreferrer"
             >
               Reports
+            </Nav.Link>
+
+            <Nav.Link
+              href="https://drive.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Magazine
             </Nav.Link>
 
           </Nav>
