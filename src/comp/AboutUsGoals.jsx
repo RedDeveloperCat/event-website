@@ -26,6 +26,7 @@ const AboutUsGoals = () => {
   return (
     <div className="about-us-container" id="about-us-container">
       {/* Title Animation on Scroll */}
+      {/*
       <motion.h1
         className="section-title"
         initial={{ opacity: 0, y: -20 }}
@@ -69,6 +70,7 @@ const AboutUsGoals = () => {
       </motion.div>
 
       {/* Gallery Button Animation on Scroll */}
+      {/*
       <motion.button
         className="gallery-btn"
         onClick={() => navigate('/gallery')}
@@ -77,7 +79,7 @@ const AboutUsGoals = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        Gallery ➤
+        IETE ➤
       </motion.button>
 
       {/* Text Section Animation on Scroll */}
@@ -91,9 +93,10 @@ const AboutUsGoals = () => {
         The IETE student Chapter at SFIT started in 2008. The objectives of this student forum are as follows:
         To keep the students updated with technological developments in the field of Electronics
         & Telecommunication. To provide them a platform to develop their technical and managerial skills by organizing various technical events such as seminars, workshops, project competitions, and technical paper presentations.
+        It offers educational programs, certifications, and conducts examinations, while also organizing conferences,
+         workshops, placement talks, and technical events. The endeavor of IETE-SFIT student Chapter is to spread awareness about state-of-the-art technologies used in industries and develop all-round skills of engineers.
       </motion.p>
-
-      <motion.p
+{/* <motion.p
         className="about-text"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -101,9 +104,11 @@ const AboutUsGoals = () => {
         transition={{ duration: 1, delay: 1.4 }}
       >
         It offers educational programs, certifications, and conducts examinations, while also organizing conferences, workshops, placement talks, and technical events. The endeavor of IETE-SFIT student Chapter is to spread awareness about state-of-the-art technologies used in industries and develop all-round skills of engineers.
-      </motion.p>
+      </motion.p>*/}
+      
 
       {/* Goals Section Animation on Scroll */}
+      {/*
       <motion.h2
         className="goals-heading"
         initial={{ opacity: 0, y: 20 }}
@@ -115,6 +120,7 @@ const AboutUsGoals = () => {
       </motion.h2>
 
       {/* Goals List Animation on Scroll */}
+      {/*
       <motion.ul
         className="goals-list"
         initial={{ opacity: 0, y: 20 }}
@@ -171,6 +177,7 @@ const AboutUsGoals = () => {
           Recognition: Awards and honors for outstanding contributions and achievements in the field.
         </motion.li>
       </motion.ul>
+      */}
     </div>
   );
 };
