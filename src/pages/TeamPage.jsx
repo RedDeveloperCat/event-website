@@ -14,7 +14,10 @@ const TeamPage = () => {
           members[] { name, "image": image.asset->url, position, size } 
         }`
       )
-      .then((data) => setTeams(data))
+      .then((data) => {
+        const sortedData = data.sort((a, b) => a.categoryOrder - b.categoryOrder);
+        setTeams(sortedData);
+      })
       .catch(console.error);
   }, []);
 
