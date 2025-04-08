@@ -2,25 +2,22 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
-import "./MyNavbar.css";
 import { useNavigate } from "react-router-dom";
+import "./MyNavbar.css";
 
 function MyNavbar() {
   const navigate = useNavigate();
+
   return (
     <Navbar expand="lg" bg="dark" className="navbar-dark">
       <Container fluid>
-        {/* <Navbar.Brand href="#">IETE Club</Navbar.Brand> */}
         <img
           src="/sfit-logo.png"
           alt="IETE Club Logo"
           className="logo-img"
           onClick={() => navigate("/")}
         />
-        <div
-          className="logo"
-          onClick={() => navigate("/")}
-        >
+        <div className="logo" onClick={() => navigate("/")}>
           <span className="logo-span">IETE SFIT</span>
         </div>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -30,22 +27,6 @@ function MyNavbar() {
             style={{ maxHeight: "260px" }}
             navbarScroll
           >
-            {/* <NavDropdown title="About Us" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-            </NavDropdown>
-          <NavDropdown title="Events" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown> */}
             <Nav.Link href="/#about-us-container">About Us</Nav.Link>
             <Nav.Link href="/gallery#event-gallery">Events</Nav.Link>
             <Nav.Link
@@ -55,9 +36,7 @@ function MyNavbar() {
             >
               SFIT
             </Nav.Link>
-
             <Nav.Link as={Link} to="/gallery">Gallery</Nav.Link>
-
             <Nav.Link
               href="https://drive.google.com/drive/folders/1ojwY1EK1pGlCHbOoiaMI_u0czV58InUg"
               target="_blank"
@@ -65,7 +44,6 @@ function MyNavbar() {
             >
               Reports
             </Nav.Link>
-
             <Nav.Link
               href="https://drive.google.com/drive/folders/18e-vmhSyp6MWnVtSb_HHEsKup_q0BYsb?usp=sharing"
               target="_blank"
@@ -73,37 +51,26 @@ function MyNavbar() {
             >
               Magazine
             </Nav.Link>
-
           </Nav>
+
+          {/* Social Media Icons */}
           <Nav.Link
             href="#"
             onClick={() => window.open("https://www.instagram.com/iete_sfit?igsh=dTR3cW1hMG9ubDgz", "_blank")}
           >
-            <img
-              src="/instagram.png"
-              alt="s-m"
-              className="social-media-link"
-            />
+            <img src="/instagram.png" alt="Instagram" className="social-media-link" />
           </Nav.Link>
           <Nav.Link
             href="#"
             onClick={() => window.open("https://www.linkedin.com", "_blank")}
           >
-            <img
-              src="/linkedin.png"
-              alt="s-m"
-              className="social-media-link"
-            />
+            <img src="/linkedin.png" alt="LinkedIn" className="social-media-link" />
           </Nav.Link>
           <Nav.Link
             href="#"
             onClick={() => window.open("https://www.twitter.com", "_blank")}
           >
-            <img
-              src="/twitter.png"
-              alt="s-m"
-              className="social-media-link"
-            />
+            <img src="/twitter.png" alt="Twitter" className="social-media-link" />
           </Nav.Link>
         </Navbar.Collapse>
       </Container>

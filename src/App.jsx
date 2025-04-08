@@ -23,10 +23,11 @@ function App() {
                             <>
                                 <MyNavbar />
                                 <Hero />
+                                <EventsPage />
                                 <AboutUsGoals />
                                 <TeamPage />
                                 <VisionPage />
-                                <EventsPage />
+                                
                                 {/* <ContactForm /> */}
                                 <Footer />
                             </>
