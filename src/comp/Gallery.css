@@ -1,15 +1,15 @@
-/* Ensure no overflow */
+/* Enhanced Gallery Styles */
 html, body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 
-/* Gallery container */
+/* Gallery container with enhanced background */
 .gallery-container {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 50%, rgba(15, 23, 42, 0.95) 100%);
   color: #ffffff;
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
   max-width: 100%;
   overflow-x: hidden;
@@ -26,106 +26,153 @@ html, body {
   right: 0;
   bottom: 0;
   background: 
-      radial-gradient(circle at 25% 75%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 25%, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 25% 75%, rgba(34, 197, 94, 0.12) 0%, transparent 60%),
+      radial-gradient(circle at 75% 25%, rgba(16, 185, 129, 0.08) 0%, transparent 60%),
+      radial-gradient(circle at 50% 50%, rgba(34, 197, 94, 0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
-/* Gallery title */
+/* Enhanced gallery title */
 .gallery-title {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 800;
   font-family: "Montserrat", sans-serif;
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 30%, #10b981 70%, #059669 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin: 40px 0;
+  margin: 50px 0;
   position: relative;
   z-index: 1;
+  text-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
 }
 
-/* Slider container */
+.gallery-title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #22c55e, #16a34a, transparent);
+    border-radius: 3px;
+}
+
+/* Enhanced slider container */
 .slider-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  margin: 50px auto;
+  margin: 60px auto;
   z-index: 1;
 }
 
 .slider-img {
   width: 90%;
-  max-width: 800px;
-  border-radius: 20px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-  border: 2px solid rgba(34, 197, 94, 0.2);
-  transition: all 0.5s ease;
+  max-width: 900px;
+  border-radius: 25px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  border: 3px solid rgba(34, 197, 94, 0.3);
+  transition: all 0.6s ease;
+  position: relative;
+}
+
+.slider-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(34, 197, 94, 0.1), transparent);
+    opacity: 0;
+    transition: all 0.4s ease;
+    border-radius: 22px;
+}
+
+.slider-img:hover::before {
+    opacity: 1;
 }
 
 .slider-img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 30px 60px rgba(34, 197, 94, 0.2);
+  transform: scale(1.03) rotateY(2deg);
+  box-shadow: 0 40px 80px rgba(34, 197, 94, 0.3);
+  border-color: rgba(34, 197, 94, 0.6);
 }
 
-/* Custom carousel controls */
+/* Enhanced carousel controls */
 .carousel-control-prev,
 .carousel-control-next {
-  width: 60px;
-  height: 60px;
-  background: rgba(34, 197, 94, 0.2);
+  width: 70px;
+  height: 70px;
+  background: rgba(34, 197, 94, 0.15);
   border-radius: 50%;
-  border: 2px solid rgba(34, 197, 94, 0.3);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  border: 3px solid rgba(34, 197, 94, 0.4);
+  backdrop-filter: blur(15px);
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  background: rgba(34, 197, 94, 0.4);
-  transform: scale(1.1);
+  background: rgba(34, 197, 94, 0.3);
+  transform: scale(1.15);
+  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.5);
+  border-color: rgba(34, 197, 94, 0.7);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    width: 30px;
+    height: 30px;
 }
 
 .carousel-indicators {
-  bottom: -50px;
+  bottom: -60px;
 }
 
 .carousel-indicators [data-bs-target] {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background-color: rgba(34, 197, 94, 0.5);
-  border: 2px solid rgba(34, 197, 94, 0.8);
-  transition: all 0.3s ease;
+  background-color: rgba(34, 197, 94, 0.4);
+  border: 3px solid rgba(34, 197, 94, 0.6);
+  transition: all 0.4s ease;
+  margin: 0 8px;
+  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.2);
 }
 
 .carousel-indicators .active {
   background-color: #22c55e;
-  transform: scale(1.2);
+  transform: scale(1.3);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.8);
+  border-color: rgba(34, 197, 94, 0.9);
 }
 
-/* Event gallery section */
+/* Enhanced event gallery section */
 .event-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 40px;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 80px;
   position: relative;
   z-index: 1;
 }
 
 .event-box {
-  padding: 25px;
-  border-radius: 20px;
+  padding: 30px;
+  border-radius: 25px;
   background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(34, 197, 94, 0.2);
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(34, 197, 94, 0.3);
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
 }
@@ -137,8 +184,8 @@ html, body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
-  transition: left 0.6s;
+  background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.12), transparent);
+  transition: left 0.8s;
 }
 
 .event-box:hover::before {
@@ -146,109 +193,136 @@ html, body {
 }
 
 .event-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(34, 197, 94, 0.2);
-  border-color: rgba(34, 197, 94, 0.4);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 35px 70px rgba(34, 197, 94, 0.25);
+  border-color: rgba(34, 197, 94, 0.5);
 }
 
 .event-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
   color: #22c55e;
   font-family: "Montserrat", sans-serif;
+  text-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
 }
 
 .event-date {
-  font-size: 0.9rem;
-  color: #94a3b8;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #a7f3d0;
+  margin-bottom: 25px;
   font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 .event-slider {
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
-  margin: 15px 0;
+  border-radius: 20px;
+  margin: 20px 0;
 }
 
 .event-carousel {
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
+  border: 2px solid rgba(34, 197, 94, 0.2);
 }
 
 .event-carousel img {
   width: 100%;
-  height: 250px;
+  height: 280px;
   object-fit: cover;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
+  border-radius: 18px;
+  transition: transform 0.6s ease;
+  filter: brightness(0.9) contrast(1.1);
 }
 
 .event-carousel img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  filter: brightness(1) contrast(1.2);
 }
 
 .event-link {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 25px;
   color: #22c55e;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: 2px solid #22c55e;
-  border-radius: 25px;
-  transition: all 0.3s ease;
+  border-radius: 30px;
+  transition: all 0.4s ease;
   background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.event-link:hover::before {
+    left: 100%;
 }
 
 .event-link:hover {
   background: #22c55e;
   color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(34, 197, 94, 0.4);
+  border-color: #16a34a;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .gallery-container {
-    padding: 60px 15px;
+    padding: 80px 15px;
   }
 
   .gallery-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .event-gallery {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 30px;
+  }
+
+  .event-box {
+    padding: 25px;
+  }
+
+  .event-title {
+    font-size: 1.4rem;
+  }
+
+  .event-carousel img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-title {
+    font-size: 2.2rem;
   }
 
   .event-box {
     padding: 20px;
   }
 
-  .event-title {
-    font-size: 1.3rem;
-  }
-
   .event-carousel img {
     height: 200px;
   }
-}
 
-@media (max-width: 480px) {
-  .gallery-title {
-    font-size: 2rem;
-  }
-
-  .event-box {
-    padding: 15px;
-  }
-
-  .event-carousel img {
-    height: 180px;
+  .event-title {
+    font-size: 1.2rem;
   }
 }
