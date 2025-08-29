@@ -3,21 +3,32 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./MyNavbar.css";
 
 function MyNavbar() {
   const navigate = useNavigate();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <Navbar expand="lg" bg="dark" className="navbar-dark">
+    <Navbar expand="lg" className={`navbar-custom ${scrolled ? 'scrolled' : ''}`} fixed="top">
       <Container fluid>
-        <img
-          src="/sfit-logo.png"
-          alt="IETE Club Logo"
-          className="logo-img"
-          onClick={() => navigate("/")}
-        />
         <div className="logo" onClick={() => navigate("/")}>
+          <img
+            src="/sfit-logo.png"
+            alt="IETE Club Logo"
+            className="logo-img"
+          />
           <span className="logo-span">IETE SFIT</span>
         </div>
         <Navbar.Toggle aria-controls="navbarScroll" />

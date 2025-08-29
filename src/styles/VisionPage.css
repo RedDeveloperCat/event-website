@@ -1,177 +1,230 @@
 /* VisionPage Specific Styles */
 .visionpage-container {
-    /* min-height: 100vh; */
-    background: transparent;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
     color: white;
-    padding: 1.5rem;
+    padding: 80px 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    font-family: 'Chivo Mono', monospace;
+    font-family: 'Roboto', sans-serif;
+}
+
+.visionpage-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .visionpage-title {
-    font-family: 'Chivo Mono', monospace;
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 1.2;
-    letter-spacing: 15%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-align: center;
-    margin-bottom: 2.5rem;
-    margin-top: 2.5rem;
-    margin-left: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
 }
-
-.visionpage-college-image {
-    width: 16rem; /* Smaller size */
-    height: 16rem;
-    object-fit: cover;
-    border-radius: 3rem; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.visionpage-logo {
-    width: 5rem; /* Smaller logo */
-    height: 8rem;
-    border-radius: 70%; /* Circular shape */
-    object-fit: cover; 
-    box-shadow: 0 0 30px rgba(128, 0, 128, 0.8);
-}
-
 
 .visionpage-image-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem; /* Space between image and logo */
-    margin-left: 0; /* Reset any unnecessary margins */
+    gap: 3rem;
+    margin: 3rem 0;
+    position: relative;
+    z-index: 1;
 }
 
-.visionpage-logo-container img {
-    box-shadow: 0 0 50px 10px rgba(128, 0, 128, 0.9);
-    border-radius: 1rem;
+.visionpage-college-image {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(34, 197, 94, 0.3);
+    transition: all 0.5s ease;
+}
+
+.visionpage-college-image:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 30px 60px rgba(34, 197, 94, 0.2);
+}
+
+.visionpage-logo-container {
+    position: relative;
+}
+
+.visionpage-logo-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #22c55e, #16a34a, #15803d, #22c55e);
+    border-radius: 20px;
+    animation: rotate 3s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .visionpage-logo {
-    width: 15rem;
+    width: 12rem;
+    height: 15rem;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.6);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.visionpage-logo:hover {
+    box-shadow: 0 0 60px rgba(34, 197, 94, 0.8);
 }
 
 .visionpage-statement {
-    font-family: "Baskervville";
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
-    font-size: 17px;
-    line-height: 1.5;
-    letter-spacing: 0.10rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
     text-align: center;
-    color: #d1d5db;
-    max-width: 65rem;
-    margin-top: 2rem;
-    margin-right: 2rem;
-}
-
-.visionpage-decorative-line {
+    color: #e2e8f0;
+    max-width: 900px;
+    margin: 3rem auto;
+    background: rgba(15, 23, 42, 0.4);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    backdrop-filter: blur(20px);
     position: relative;
-    background-color: #ed8936;
-}
-
-.visionpage-top-line {
-    top: 1rem;
-    left: 52%;
-    transform: translateX(-50%);
-    width: 45rem;
-    height: 0.25rem;
-}
-
-.visionpage-bottom-line {
-    top: 33.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100rem;
-    height: 0.25rem;
-    background-color: #ed8936;
-}
-
-.visionpage-events-link {
-    font-family: 'Chivo Mono', monospace;
-    font-weight: 300;
-    font-size: 20px;
-    color: #ed8936;
-    text-decoration: none;
-    margin-top: 2rem;
-}
-
-.visionpage-events-link:hover {
-    text-decoration: underline;
+    z-index: 1;
 }
 
 .vision-btn {
-  background-color: #ff6600;
-  color: #ffffff;
-  padding: 15px 25px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 30px 0;
-  border-radius: 5px;
-  transition: background 0.3s;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin: 40px 0;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.vision-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.vision-btn:hover::before {
+    left: 100%;
 }
 
 .vision-btn:hover {
-  background-color: #e65c00;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(34, 197, 94, 0.4);
+}
+
+/* Decorative elements */
+.decorative-line {
+    background: linear-gradient(90deg, transparent, #22c55e, transparent);
+    height: 2px;
+    width: 300px;
+    margin: 2rem auto;
+    border-radius: 1px;
 }
 
 /* For Tablets and Smaller Screens */
 @media (max-width: 768px) {
     .visionpage-title {
-      font-size: 24px;
-      margin-left: 0;
+        font-size: 2.5rem;
     }
-  
+
     .visionpage-image-section {
-      flex-direction: column; /* Stack vertically */
-      gap: 1rem;
+        flex-direction: column;
+        gap: 2rem;
     }
-  
+
     .visionpage-college-image {
-      width: 12rem; /* Smaller size */
-      height: 12rem;
-      border-radius: 2rem;
+        width: 16rem;
+        height: 16rem;
     }
-  
+
     .visionpage-logo {
-      width: 5rem;
-      height: 5rem;
-      border-radius: 10%; 
+        width: 10rem;
+        height: 12rem;
     }
-  
+
     .visionpage-statement {
-      font-size: 14px;
-      margin-right: 0;
-      max-width: 90%;
+        font-size: 1.1rem;
+        padding: 30px;
+        max-width: 95%;
     }
-  }
-  
-  /* For Mobile Phones */
-  @media (max-width: 480px) {
+}
+
+/* For Mobile Phones */
+@media (max-width: 480px) {
+    .visionpage-container {
+        padding: 60px 1rem;
+    }
+
     .visionpage-title {
-      font-size: 24px;
+        font-size: 2rem;
     }
-  
+
     .visionpage-college-image {
-      width: 10rem;
-      height: 10rem;
+        width: 14rem;
+        height: 14rem;
     }
-  
+
     .visionpage-logo {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 10%;
+        width: 8rem;
+        height: 10rem;
     }
-  
+
     .visionpage-statement {
-      font-size: 12px;
+        font-size: 1rem;
+        padding: 25px;
     }
-  }
+
+    .vision-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}

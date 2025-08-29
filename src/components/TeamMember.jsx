@@ -1,51 +1,27 @@
+import imageUrlBuilder from "@sanity/image-url";
+import sanityClient from "../sanity/sanityconfig";
+
+const builder = imageUrlBuilder(sanityClient);
+const urlFor = (source) => builder.image(source).width(300).height(300).url();
+
 const TeamMember = ({ name, image, size }) => {
-  const circleSize = size === "large" ? "100px" : "90px";
-
-  const containerStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-    margin: "10px",
-  };
-
-  const circleStyle = {
-    width: circleSize,
-    height: circleSize,
-    borderRadius: "50%",
-    backgroundColor: "#FF0000",
-    boxShadow: "0 0 20px rgba(255, 0, 0, 0.3)",
-    backgroundImage: `url(${image})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
-
-  const nameStyle = {
-    marginTop: "8px",
-    fontSize: "12px",
-    color: "white",
-    fontFamily: "monospace",
-  };
-
   return (
-    <div style={containerStyle}>
-      <div style={circleStyle}></div>
-      <p style={nameStyle}>{name}</p>
+    <div className="team-member">
+      <div className="member-image-container">
+        <img
+          src={urlFor(image)}
+          alt={name}
+          className="member-image"
+        />
+      </div>
+      <p className="member-name">{name}</p>
     </div>
   );
 };
-const TeamContainer = ({ members }) => {
-  const containerStyle = {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    gap: "20px",
-    padding: "20px",
-    flexDirection: "row",
-  };
 
+const TeamContainer = ({ members }) => {
   return (
-    <div style={containerStyle}>
+    <div className="team-members-grid">
       {members.map((member, index) => (
         <TeamMember key={index} {...member} />
       ))}
